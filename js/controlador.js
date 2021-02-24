@@ -47,3 +47,91 @@ var categorias = [];
   
   console.log(categorias);
 })();
+
+function seleccionarCategoria(valor) {
+    categorias.forEach(function(categoria, i) {
+        seleccionar += `<option value="${i}">${categoria.nombreCategoria}</option>`;
+        generrarApp(categoria[valor]);
+        //categoria.addEventListener('change', generrarApp(categoria));
+
+    });
+    document.getElementById('categoria').innerHTML = seleccionar;
+
+    //generrarApp(categoria.aplicaciones);
+    // document.getElementById('categoria').innerHTML += `<option>${elementos.nombreCategoria}</option>`;
+    // document.addEventListener('DOMContentLoaded', sC);
+    // document.addEventListener('change', elementos.nombreCategoria, true);
+};
+
+/*function start() {
+    document.addEventListener('DOMContentLoaded', sC, true);
+    // document.addEventListener('onchange', sC, false);
+}
+start();
+*/
+// generrarApp(categoria);
+
+
+
+
+/*for (let i = 0; i < categorias.length; i++) {
+    const elementos = categorias[i];
+    console.log('Los nombres de la categoria', elementos.nombreCategoria);
+};
+*/
+// document.addEventListener('unload', true);
+
+//document.getElementById('categoria').innerHTML += `<option>${cat.nombreCategoria}</option>`
+
+/*    // document.getElementById('aplicaciones').innerHTML = '';
+    for (let i = 0; i < categorias.length; i++) {
+        var elementos = categorias[i];
+        console.log(elementos.nombreCategoria);
+    };
+    for (let j = 0; j < elementos.aplicaciones.length; j++) {
+        var salida = elementos.aplicaciones[j];
+        console.log(salida);
+        // const element = categorias[i];
+        // salida.aplicaciones.forEach(function(app, i) {
+        */
+
+function generrarApp(categoria) {
+    /* for (let i = 0; i < categoria.aplicaciones.length; i++) {
+         let estrellas = '';
+         for (let i = 0; i < categoria.aplicaciones[j].calificacion; i++) {
+             estrellas += '<i class="fas fa-star"></i>';
+         }
+         for (let i = 0; i < 5 - (categoria.aplicaciones[j].calificacion); i++) {
+             estrellas += '<i class="far fa-star" ></i>';
+         }*/
+    //categorias.forEach(function(categoria) {
+    categoria.aplicaciones.forEach(function(aplicacion, i) {
+            let estrellas = '';
+            for (let i = 0; i < aplicacion.calificacion; i++) {
+                estrellas += '<i class="fas fa-star"></i>';
+            }
+            for (let i = 0; i < 5 - aplicacion.calificacion; i++) {
+                estrellas += '<i class="far fa-star" ></i>';
+            }
+            document.getElementById('aplicaciones').innerHTML +=
+                `<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="card">
+                        <img src="${aplicacion.icono}" class="card-img-top " alt="... ">
+                        <div class="card-body">
+                            <h5 class="card-title ">${aplicacion.nombre}</h5>
+                            <p class="card-text ">${aplicacion.desarrollador} </p>
+                            <div class="my-2">
+                                ${estrellas}
+                            </div>
+                            <div>
+                                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        })
+        // })
+}
+// }
+
+// generrarApp(categoria);
