@@ -8,52 +8,8 @@ body {
 .bg-custom{
     background-color: black;
 }
-
-/*
-<div class="row">
-            <select class="form-control form-control-lg" id="categoria" onchange="cargarAplicaciones();">
-                <option>Categorias</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-
-
-<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="card">
-                    <img src="img/app-icons/1.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">App 1</h5>
-                      <p class="card-text">Desarollador: </p>
-                      <div>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-<select class="form-control form-control-lg" id="categoria" onchange="cargarAplicaciones();">
-                <option>Categorias</option>
-                <option value="0">Categoria 1</option>
-                <option value="1">Categoria 2</option>
-                <option value="2">Categoria 3</option>
-                <option value="3">Categoria 4</option>
-                <option value="4">Categoria 5</option>
-            </select>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-5">
-                <div class="card">
-                    <img src="img/app-icons/1.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">App 1</h5>
-                      <p class="card-text">Desarollador: Facebook</p>
-                      <div>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                      </div>
-                    </div>
-                </div>
-            </div>
-*/
+.card-shadow:hover {
+  background-color: #ffc107 !important;
+  color: whitesmoke !important;
+  cursor: pointer !important;
+}
